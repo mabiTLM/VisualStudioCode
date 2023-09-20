@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사</title>
+</head>
+<body>
+
+    <form action="" method="post">
+        <h1>설문조사지</h1>
+        <fieldset style="width: 20%;">
+            <legend>인적사항</legend>
+            <label for="name">이름 : </label>
+            <input type="text" id="name">
+        </fieldset>
+        <fieldset>
+            <legend>조사내용</legend>        
+            <fieldset>
+                <legend>나이</legend>
+                <ol>
+                    <li>
+                        <div>
+                            <input type="radio" name="age">
+                            20대 이하
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input type="radio" name="age">
+                            30대
+                        </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="radio" name="age">
+                        40대
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="radio" name="age">
+                        50대
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="radio" name="age">
+                        60대 이상
+                    </div>
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>취미</legend>
+            <ul>                
+                <li>
+                    <input type="checkbox" name="hobby">
+                    독서
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobby">
+                    게임
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobby">
+                    운동
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobby" onclick ="toggle(this)">
+                    기타
+                    <input type="text" id="hobby" disabled>
+                    <script>
+
+                        function toggle(checkbox)
+                        {
+                            const elem = document.getElementById("hobby");
+
+                            elem.disabled = checkbox.checked ?  false : true;
+                        }
+                    </script>
+                </li>
+            </ul>
+        </fieldset>
+    </fieldset>
+
+    <input type="submit" value="보내기">
+
+</form>
+
+</body>
+</html>
