@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 선택자 -->
+    <!-- 1.전체 선택자 
+    스타일의 문서의 모든 요소에 적용할때 사용
+    주로 모든 하위요소에 스타일을 한꺼번에 적용,
+    웹 브라우저의 기본 스타일을 초기화할때 사용
+    * {속성 : 값..}
+
+    2.타입 선택자 :
+    특정 태그를 사용한 모든 요소에 스타일을 적용할때
+    해당 태그를 사용한 모든 요소에 적용
+
+    3. 클래스 선택자
+    같은 태그라도 일부는 다른 스타일을 적용하고 싶다면 요녀석을 사용
+    클래스이름을 사용해서 다른 선택자와 구별.
+    2개 이상의 스타일을 적용하고 싶다면 공백으로 구분함.
+
+    4. id 선택자
+    웹 문서의 특정부분을 선택해서 스타일을 적용
+
+    클래스선택자와의 차이점
+    -클래스 선택자는 문서에서 여러번 적용.
+    id 주로 문서의 레이아웃과 관련된 스타일을 지정
+
+    5.그룹 선택자
+    같은 스타일 규칙을 사용하는 경우 ,로 구분해서 선택자를 나열한 다음 스타일 규칙을 적용
+
+    -->
+    <!-- *을쓴다 보통 여백설정할때 사용한다-->
+    <style>
+
+        *{
+            margin: 0;
+        }
+
+
+        h2,p{font-style: italic;}
+
+        p{
+            font-style: italic;
+            border: 1px dotted #000;
+        }
+        .accent{
+            border: 1px solid black;
+        }
+        .bg{
+            background-color: aqua;
+        }
+        #container{
+            width: 500px;
+            padding: 10px;
+            border: 1px solid blueviolet;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2 class="accent">사과</h2>
+    <h2 id="ddd">dddd</h2>
+    <p>사과나무</p>
+    <p>원산지는 <span class="accent">발칸반도</span></p>
+
+    <h2 class="accent bg">배</h2>
+
+    <div id="container">
+        <h2 class="accent bg">배다</h2>
+        <p>배는 배나무속 과일</p>
+        <p>배는 인간이나 동물의 앞부분</p>
+
+
+    </div>
+    
+</body>
+</html>

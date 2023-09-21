@@ -1,0 +1,54 @@
+#container{
+    width: 650px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#check {
+    width: 640px;
+    border: 1px solid #ccc;
+}
+
+#poster{
+    width: 640px;
+}
+
+#smalltitle{
+    font-size: 20px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+h1
+{color: white;
+    background-color: #222;
+
+    /* 제목이랑 다른 요소간의 마진여백 */
+    margin: 10;
+
+    /* 테두리와 제목 텍스트사이의 패딩 여백 */
+    padding: 10px;
+    
+    font-size: 30px;
+
+    text-align: center;
+}
+
+h2{
+    color: red;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    font-size: 20px;
+}
+
+p{
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    margin: auto;
+}

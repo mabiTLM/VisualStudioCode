@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    width: 300px;
+    border: 1px solid black;
+}
+
+/* #pos1{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#pos2{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+#pos3{
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+} */
+
+#static
+{
+    position: static;
+}
+
+#relative-1{
+    position: relative;
+    color: blue;
+}
+
+#relative-2{
+    position: absolute;
+    left: 200px;
+    top: -50px;
+    color: red;
+}
+
+#fixed {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: fixed;
+    right: 30px;
+    top: 50px;
+}
+
+#test{
+    position: relative;
+}
