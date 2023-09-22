@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="div-scoreboard">
+      <div class="div-scoreboard-inner">
+        <div class="div-shots-left">
+          <span>남은 횟수</span>
+          <span id="shots-left">15</span>
+        </div>
+
+        <div class="div-score">
+          <div class="div-score-name">서태웅</div>
+          <div id="computer-score" class="div-score-number">0</div>
+        </div>
+        <div class="div-score">
+          <div class="div-score-name">강백호</div>
+          <div id="user-score" class="div-score-number">0</div>
+        </div>
+        <div id="text">서태웅 부터 시작</div>
+      </div>
+    </div>
+    <div class="div-control-panel">
+      <div id="div-computer" class="div-panel">
+        <div class="div-control-name">서태웅</div>
+        <button class="btn-computer" onclick="onComputerShoot()">슛하기</button>
+      </div>
+
+      <div id="div-user" class="div-panel">
+        <div class="div-control-name">강백호</div>
+        <button class="btn-user" onclick="onUserShoot(2)" disabled>
+          2점슛
+        </button>
+        <button class="btn-user" onclick="onUserShoot(3)" disabled>
+          3점슛
+        </button>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

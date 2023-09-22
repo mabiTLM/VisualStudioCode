@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rectangle {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">나를 눌러봐</button>
+
+    <div class="rectangle" id="rotate"></div>
+    <script>
+      const btn = document.getElementById("btn");
+      //   btn.addEventListener("click", () => {
+      //     alert("버튼이 클릭되어 버렸음");
+      //   });
+
+      function alertEvent() {
+        alert("버튼이 클릭되어 버렸음");
+      }
+      btn.addEventListener("click", alertEvent);
+
+      const rectangle = document.getElementById("rotate");
+
+      var angle = 45;
+      rectangle.addEventListener("click", () => {
+        // rectangle.style.transform = "rotate(45deg)";
+        angle += 45;
+        rectangle.style.transform = `rotate(${angle}deg)`;
+      });
+    </script>
+  </body>
+</html>

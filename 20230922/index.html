@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function myFunc(a, b, c) {
+        const len = arguments.length;
+
+        if (len == 0) {
+          console.log("파라미터 없음");
+        } else if (len == 1) {
+          console.log("파라미터 한개");
+        } else if (len == 2) {
+          return console.log(a + b);
+        } else {
+          return console.log(a + b + c);
+        }
+      }
+
+      myFunc();
+      myFunc(1);
+      myFunc(1, 2);
+      myFunc(1, 2, 3);
+
+      //재귀함수 : 나 자신을 호출함. 기본적으로 무한으로 돌기 때문에 반드시 탈출조건이 있어야 함.
+
+      function recursiveCount(n) {
+        if (n < 0) return;
+        console.log(n);
+        recursiveCount(n - 1);
+      }
+
+      recursiveCount(10);
+
+      function factorial(n) {
+        if (n < 1) return 1;
+        return n * factorial(n - 1);
+      }
+
+      //   function sum(a, b) {
+      //     return a + b;
+      //   }
+      //   console.log(a + b); 밖에선 못쓴다
+
+      //   var var1 = 1;
+      //   if (true) {
+      //     var var2 = 2;
+      //     if (true) {
+      //       var var3 = 3;
+      //     }
+      //   }
+
+      //   var a = 1; //밖에서 var로 선언됐으면
+      //   if (true) {
+      //     var a = 10; //내부에서 바꿔도
+      //   }
+      //   console.log(a); //전역변수다
+
+      //   var i = 10;
+      //   for (var i = 0; i < 5; i++) {
+      //     console.log(i);
+      //   }
+      //   console.log(i);
+
+      //   function func() {
+      //     var x;
+      //     x = "지역";
+      //     console.log(x);
+      //     return x;
+      //   }
+      //   func();
+      //   console(x);
+
+      //   function foo() {
+      //     var var1 = 4;
+      //     function bar() {
+      //       var var1 = 3;
+      //     }
+      //   }
+    </script>
+  </body>
+</html>
