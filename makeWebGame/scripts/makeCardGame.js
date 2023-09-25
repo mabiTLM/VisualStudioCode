@@ -24,6 +24,12 @@ function deleteCookie(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1999 00:00:10 GMT;";
 }
 
+function newGame() {
+  deleteCookie("deck");
+  alert("새 게임을 불러옵니다");
+  setCookie("deck", card);
+}
+
 function add(num) {
   card = getCookie("deck").split(",");
   card[card.length] = num;
