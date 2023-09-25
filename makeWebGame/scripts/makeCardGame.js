@@ -1,32 +1,37 @@
-let card = ["1", "2", "3"];
+let card = ["1", "21", "3"];
 
-function add(num) {
-  if (getCookie("deck").length > 0) {
-    card = getCookie("deck");
-  }
-
-  setCookie("deck", JSON.stringify(card), 1);
+function setCookie(name, value) {
+  var exdate = new Date();
+  exdate.setDate(exdate.getDate() + 30);
+  var cookie_value = escape(value) + "; expires=" + exdate.toUTCString();
+  document.cookie = name + "=" + cookie_value;
 }
 
-var setCookie = function (name, value, exp) {
-  var date = new Date();
-  date.setTime(date.getTime + exp * 24 * 60 * 60 * 1000);
-  document.cookie =
-    name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
-};
+function getCookie(name) {
+  var x, y;
+  var val = document.cookie.split(";");
+  for (var i = 0; i < val.length; i++) {
+    x = val[i].substr(0, val[i].indexOf("="));
+    y = val[i].substr(val[i].indexOf("=") + 1);
+    x = x.replace(/^\s+|\s+$/g, "");
+    if (x == name) {
+      return unescape(y);
+    }
+  }
+}
 
-var getCookie = function (name) {
-  var value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
-  return value ? value[2] : null;
-};
-var deleteCookie = function (name) {
+function deleteCookie(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1999 00:00:10 GMT;";
-};
+}
+
+function add(num) {
+  card = getCookie("deck").split(",");
+  card[card.length] = num;
+  setCookie("deck", card);
+}
 
 function watchCard() {
-  if (getCookie("deck").length > 0) {
-    card = getCookie("deck");
-  }
+  card = getCookie("deck").split(",");
   for (let i = 0; i < card.length; i++) {
     console.log(card[i]);
   }
